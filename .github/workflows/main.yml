@@ -36,16 +36,16 @@ jobs:
 
     - name: terraform init
       run:
-        terraform -chdir=terraform init
+        terraform init
 
     - name: terraform format
       run:
-        terraform -chdir=terraform fmt
+        terraform fmt
 
     - name: terraform validate
       run:
-        terraform -chdir=terraform validate
+        terraform validate
 
     - name: terraform apply
       run:
-        terraform -chdir=terraform apply -auto-approve
+        terraform apply -auto-approve
