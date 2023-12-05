@@ -26,7 +26,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{secrets.DOCKERHUB_USERNAME}}/website:latest
+        tags: ${{secrets.DOCKERHUB_USERNAME}}/aynginx:latest
 
     - name: setup terraform
       uses: hashicorp/setup-terraform@v2
