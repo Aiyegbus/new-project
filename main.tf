@@ -5,7 +5,7 @@ resource "aws_instance" "pro_instance" {
   key_name      = var.key_pair
   subnet_id     = aws_subnet.pro_sub[count.index].id
 
-  security_groups = [aws_security_group.loadbalancer.id]
+  security_groups = [aws_security_group.pro_sg.id]
 
   user_data = file("user_data.sh")
   # Additional EC2 instance configuration, e.g., user data, tags, etc.
